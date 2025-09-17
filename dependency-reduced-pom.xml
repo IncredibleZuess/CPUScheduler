@@ -16,6 +16,7 @@
               <goal>shade</goal>
             </goals>
             <configuration>
+              <shadedArtifactAttached>true</shadedArtifactAttached>
               <transformers>
                 <transformer>
                   <mainClass>com.scheduler.NewMain</mainClass>
@@ -53,7 +54,7 @@
           <execution>
             <id>default-cli</id>
             <configuration>
-              <mainClass>com.scheduler.Table</mainClass>
+              <mainClass>com.scheduler.NewMain</mainClass>
             </configuration>
           </execution>
         </executions>
