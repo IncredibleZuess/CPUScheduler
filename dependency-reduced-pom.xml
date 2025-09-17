@@ -7,6 +7,44 @@
   <build>
     <plugins>
       <plugin>
+        <groupId>com.akathist.maven.plugins.launch4j</groupId>
+        <artifactId>launch4j-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>l4j-clui</id>
+            <phase>package</phase>
+            <goals>
+              <goal>launch4j</goal>
+            </goals>
+            <configuration>
+              <headerType>console</headerType>
+              <outfile>target/launch.exe</outfile>
+              <jar>target/scheduler-1.0-SNAPSHOT.jar</jar>
+              <errTitle>encc</errTitle>
+              <classPath>
+                <mainClass>com.scheduler.NewMain</mainClass>
+                <addDependencies>true</addDependencies>
+                <preCp>anything</preCp>
+              </classPath>
+              <jre>
+                <minVersion>1.5.0</minVersion>
+              </jre>
+              <versionInfo>
+                <fileVersion>1.2.3.4</fileVersion>
+                <txtFileVersion>txt file version?</txtFileVersion>
+                <fileDescription>a description</fileDescription>
+                <copyright>my copyright</copyright>
+                <productVersion>4.3.2.1</productVersion>
+                <txtProductVersion>txt product version</txtProductVersion>
+                <productName>E-N-C-C</productName>
+                <internalName>ccne</internalName>
+                <originalFilename>original.exe</originalFilename>
+              </versionInfo>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
         <artifactId>maven-shade-plugin</artifactId>
         <version>3.6.1</version>
         <executions>
