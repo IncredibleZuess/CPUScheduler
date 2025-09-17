@@ -76,6 +76,7 @@
                         <!-- Usage: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
+                            <launcher>scheduler</launcher>
                             <mainClass>com.scheduler.NewMain</mainClass>
                         </configuration>
                     </execution>

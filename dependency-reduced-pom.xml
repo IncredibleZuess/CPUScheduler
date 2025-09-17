@@ -54,6 +54,7 @@
           <execution>
             <id>default-cli</id>
             <configuration>
+              <launcher>scheduler</launcher>
               <mainClass>com.scheduler.NewMain</mainClass>
             </configuration>
           </execution>
